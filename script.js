@@ -64,11 +64,7 @@ function sendMessage(message) {
 }
 
 function startWebRTC(isOfferer) {
-    const configuration = {
-  iceServers: [{
-    urls: 'stun:stun.l.google.com:19302'
-  }]
-};
+  
   pc = new RTCPeerConnection(configuration);
 
   // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
