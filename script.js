@@ -92,7 +92,7 @@ function startWebRTC(isOfferer) {
 
   navigator.mediaDevices.getUserMedia({
     audio: true,
-    video: true,
+    video: false,
   }).then(stream => {
     // Display your local video in #localVideo element
     localVideo.srcObject = stream;
