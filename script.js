@@ -3,13 +3,6 @@ try {
 if (!location.hash) {
   location.hash = Math.floor(Math.random() * 0xFFFFFF).toString(16);
 }
-//const roomHash = location.hash.substring(1);
-
-// TODO: Replace with your own channel ID
-//const drone = new ScaleDrone('yiS12Ts5RdNhebyM');
-//console.log(drone);
-// Room name needs to be prefixed with 'observable-'
-//const roomName = 'observable-' + roomHash;
 
 let room;
 let pc;
@@ -22,7 +15,7 @@ function onSuccess() {};
 function onError(error) {
   console.error(error);
 };
-//try {
+
 const drone = new ScaleDrone('ek4HvzSDUKzvw8fC');
 const roomHash = location.hash.substring(1);
 const roomName = 'observable-' + roomHash;
@@ -50,10 +43,6 @@ drone.on('open', error => {
     startWebRTC(isOfferer);
   });
 });
-/*} catch(ex)
-{
-    alert(ex);
-}*/
 
 // Send signaling data via Scaledrone
 function sendMessage(message) {
